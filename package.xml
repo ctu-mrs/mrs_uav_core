@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="2">
+
+  <name>mrs_uav_core</name>
+  <version>1.0.0</version>
+  <description>The MRS UAV Core metapackage</description>
+
+  <author email="tomas.baca@fel.cvut.cz">Tomas Baca</author>
+  <maintainer email="tomas.baca@fel.cvut.cz">Tomas Baca</maintainer>
+
+  <license>BSD 3-Clause</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>mrs_msgs</depend>
+  <depend>mrs_lib</depend>
+  <depend>mrs_uav_hw_api</depend>
+  <depend>mrs_uav_managers</depend>
+  <depend>mrs_uav_controllers</depend>
+  <depend>mrs_uav_trackers</depend>
+  <depend>mrs_uav_state_estimators</depend>
+  <depend>mrs_uav_general</depend>
+  <depend>mrs_multirotor_simulator</depend>
+  <depend>mrs_rviz_plugins</depend>
+  <depend>mrs_uav_trajectory_generation</depend>
+  <depend>mrs_uav_status</depend>
+  <depend>mrs_uav_testing</depend>
+
+  <depend>mrs-uav-shell-additions</depend>
+  <depend>tmux</depend>
+  <depend>tmuxinator</depend>
+
+</package>
