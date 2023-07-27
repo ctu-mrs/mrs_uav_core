@@ -192,27 +192,3 @@ sources:
         target: ros_packages/thirdparty/nlopt_ros
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/tmux/tmux.git
-    name: tmux
-    rev: 3.0a
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: utils/tmux
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/tmuxinator/tmuxinator.git
-    name: tmuxinator
-    rev: v2.0.0
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: utils/tmuxinator
-    scripts:
-      - git submodule update --init --recursive
