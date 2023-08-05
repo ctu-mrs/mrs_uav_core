@@ -1,0 +1,24 @@
+<launch>
+
+  <!-- args corresponding to environment variables -->
+  <arg name="LOGGER_DEBUG" default="$(optenv LOGGER_DEBUG false)" />
+
+  <!-- other args -->
+  <arg name="debug" default="false" />
+  <arg name="n_threads" default="16" />
+  <arg name="nodelet_manager_name" default="" />
+
+  <arg     if="$(arg debug)" name="launch_prefix" value="debug_roslaunch" />
+  <arg unless="$(arg debug)" name="launch_prefix" value="" />
+
+  <arg     if="$(arg LOGGER_DEBUG)" name="logger_debug_file" value="$(find mrs_uav_core)/config/debug_verbosity.conf" />
+  <arg unless="$(arg LOGGER_DEBUG)" name="logger_debug_file" value="" />
+
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(arg logger_debug_file)"/>
+
+  <!-- Nodelet manager -->
+  <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager_name)" args="manager" output="screen" launch-prefix="$(arg launch_prefix) nice -n -10">
+    <param name="num_worker_threads" value="$(arg n_threads)" />
+  </node>
+
+</launch>

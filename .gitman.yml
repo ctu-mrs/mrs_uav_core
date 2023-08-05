@@ -12,18 +12,6 @@ sources:
         target: ros_packages/mrs_multirotor_simulator
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/geometry2
-    name: geometry2
-    rev: noetic-devel
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: ros_packages/thirdparty/geometry2
-    scripts:
-      - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_bumper.git
     name: mrs_bumper
     rev: hw_api_ci
@@ -178,17 +166,5 @@ sources:
     links:
       - source: ''
         target: ros_packages/mrs_uav_trajectory_generation
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/nlopt_ros
-    name: nlopt_ros
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: ros_packages/thirdparty/nlopt_ros
     scripts:
       - git submodule update --init --recursive
