@@ -4,7 +4,7 @@
   <arg name="RUN_TYPE" default="$(optenv RUN_TYPE UNSET)" />
   <arg name="UAV_NAME" default="$(optenv UAV_NAME UNSET)" />
 
-  <!-- ====================== optional args ===================== -->
+    <!-- ====================== optional args ===================== -->
   <arg name="PROFILER" default="$(optenv PROFILER false)" />
   <arg name="BODY_DISTURBANCE_X" default="$(optenv INITIAL_DISTURBANCE_X 0.0)" />
   <arg name="BODY_DISTURBANCE_Y" default="$(optenv INITIAL_DISTURBANCE_Y 0.0)" />
@@ -14,18 +14,18 @@
   <arg name="WORLD_NAME" default="$(optenv WORLD_NAME)" />
   <arg name="UAV_MASS" default="$(optenv UAV_MASS)" />
 
-  <!-- config files  -->
+    <!-- config files  -->
   <arg name="platform_config" default="" />
   <arg name="custom_config" default="" />
   <arg name="world_config" default="" />
   <arg name="uav_names_config" default="" />
 
   <arg if="$(eval arg('RUN_TYPE') == 'simulation' and arg('WORLD_FILE') == '' and arg('WORLD_NAME') == '')"  name="world_file" value="$(find mrs_uav_core)/config/world_simulation.yaml" />
-  <arg if="$(eval arg('RUN_TYPE') == 'uav' and arg('WORLD_FILE') == '' and arg('WORLD_NAME') != '')" name="world_file" value="$(find mrs_uav_deployement)/config/worlds/world_$(arg WORLD_NAME).yaml" />
+  <arg if="$(eval arg('RUN_TYPE') == 'realworld' and arg('WORLD_FILE') == '' and arg('WORLD_NAME') != '')" name="world_file" value="$(find mrs_uav_deployement)/config/worlds/world_$(arg WORLD_NAME).yaml" />
   <arg if="$(eval arg('WORLD_FILE') != '')" name="world_file" value="$(arg WORLD_FILE)" />
   <arg if="$(eval arg('world_config') != '')" name="world_file" value="$(arg world_config)" />
 
-  <!-- ============== check for the compulsory args ============= -->
+    <!-- ============== check for the compulsory args ============= -->
   <arg if="$(eval arg('RUN_TYPE') == 'UNSET')" name="SET_RUN_TYPE_ENV_VARIABLE" default="$(env MISSING_RUN_TYPE)" />
   <arg if="$(eval arg('UAV_NAME') == 'UNSET')" name="SET_UAV_NAME_ENV_VARIABLE" default="$(env MISSING_UAV_NAME)" />
 
@@ -38,15 +38,15 @@
   <arg if="$(eval arg('nodelet_manager') == '')" name="nodelet_manager_name" default="$(arg UAV_NAME)_nodelet_manager" />
   <arg if="$(eval arg('nodelet_manager') != '')" name="nodelet_manager_name" default="$(arg nodelet_manager)" />
 
-  <!-- currently, ROS_MASTER_URI has to be set to http://localhost:11311 otherwise ROS dies when -->
-  <!-- the drone disconnects from wifi -->
-  <arg if="$(eval arg('RUN_TYPE') == 'uav')" name="ROS_MASTER_URI" default="$(optenv ROS_MASTER_URI none)" />
-  <arg if="$(eval arg('RUN_TYPE') == 'uav' and arg('ROS_MASTER_URI') != 'http://localhost:11311')" name="SET_YOUR_ROS_MASTER_URI_TO_LOCALHOST" default="$(env MISSING_ROS_MASTER_URI)" />
+    <!-- currently, ROS_MASTER_URI has to be set to http://localhost:11311 otherwise ROS dies when -->
+    <!-- the drone disconnects from wifi -->
+  <arg if="$(eval arg('RUN_TYPE') == 'realworld')" name="ROS_MASTER_URI" default="$(optenv ROS_MASTER_URI none)" />
+  <arg if="$(eval arg('RUN_TYPE') == 'realworld' and arg('ROS_MASTER_URI') != 'http://localhost:11311')" name="SET_YOUR_ROS_MASTER_URI_TO_LOCALHOST" default="$(env MISSING_ROS_MASTER_URI)" />
 
   <arg name="g" default="9.81" />
   <arg name="n_threads" default="16" />
 
-  <!-- NodeletManager //{ -->
+    <!-- NodeletManager //{ -->
 
   <group ns="$(arg UAV_NAME)" if="$(eval arg('STANDALONE') == 0 and arg('nodelet_manager') == '')">
     <include file="$(find mrs_uav_core)/launch/nodelet_manager.launch">
@@ -65,7 +65,7 @@
   <include file="$(find mrs_uav_managers)/launch/control_manager.launch">
 
     <arg name="UAV_NAME" value="$(arg UAV_NAME)" />
-    <arg if="$(eval arg('RUN_TYPE') == 'uav')" name="UAV_MASS" value="$(arg UAV_MASS)" />
+    <arg if="$(eval arg('RUN_TYPE') == 'realworld')" name="UAV_MASS" value="$(arg UAV_MASS)" />
     <arg name="PROFILER" value="$(arg PROFILER)" />
     <arg name="BODY_DISTURBANCE_X" value="$(arg BODY_DISTURBANCE_X)" />
     <arg name="BODY_DISTURBANCE_Y" value="$(arg BODY_DISTURBANCE_Y)" />
@@ -170,7 +170,7 @@
   <include file="$(find mrs_uav_managers)/launch/uav_manager.launch">
 
     <arg name="UAV_NAME" value="$(arg UAV_NAME)" />
-    <arg if="$(eval arg('RUN_TYPE') == 'uav')" name="UAV_MASS" value="$(arg UAV_MASS)" />
+    <arg if="$(eval arg('RUN_TYPE') == 'realworld')" name="UAV_MASS" value="$(arg UAV_MASS)" />
     <arg name="PROFILER" value="$(arg PROFILER)" />
     <arg name="RUN_TYPE" value="$(arg RUN_TYPE)" />
     <arg name="LOGGER_DEBUG" value="$(arg LOGGER_DEBUG)" />
