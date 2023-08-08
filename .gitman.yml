@@ -120,18 +120,6 @@ sources:
         target: ros_packages/mrs_uav_status
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_testing.git
-    name: mrs_uav_testing
-    rev: hw_api
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: ros_packages/mrs_uav_testing
-    scripts:
-      - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_trackers.git
     name: mrs_uav_trackers
     rev: hw_api
