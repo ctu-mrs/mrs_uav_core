@@ -12,18 +12,6 @@ sources:
         target: ros_packages/mrs_multirotor_simulator
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_bumper.git
-    name: mrs_bumper
-    rev: hw_api
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: ros_packages/mrs_bumper
-    scripts:
-      - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_state_estimators.git
     name: mrs_uav_state_estimators
     rev: master

@@ -2,13 +2,10 @@
 
   <!-- ===================== compulsory args ==================== -->
   <arg name="RUN_TYPE" default="$(optenv RUN_TYPE UNSET)" />
-  <arg name="UAV_TYPE" default="$(optenv UAV_TYPE UNSET)" />
   <arg name="UAV_NAME" default="$(optenv UAV_NAME UNSET)" />
 
   <!-- ====================== optional args ===================== -->
   <arg name="PROFILER" default="$(optenv PROFILER false)" />
-  <arg name="PIXGARM" default="$(optenv PIXGARM false)" />
-  <arg name="SENSORS" default="$(optenv SENSORS)" />
   <arg name="BODY_DISTURBANCE_X" default="$(optenv INITIAL_DISTURBANCE_X 0.0)" />
   <arg name="BODY_DISTURBANCE_Y" default="$(optenv INITIAL_DISTURBANCE_Y 0.0)" />
   <arg name="DEBUG" default="$(optenv DEBUG false)" />
@@ -30,7 +27,6 @@
 
   <!-- ============== check for the compulsory args ============= -->
   <arg if="$(eval arg('RUN_TYPE') == 'UNSET')" name="SET_RUN_TYPE_ENV_VARIABLE" default="$(env MISSING_RUN_TYPE)" />
-  <arg if="$(eval arg('UAV_TYPE') == 'UNSET')" name="SET_UAV_TYPE_ENV_VARIABLE" default="$(env MISSING_UAV_TYPE)" />
   <arg if="$(eval arg('UAV_NAME') == 'UNSET')" name="SET_UAV_NAME_ENV_VARIABLE" default="$(env MISSING_UAV_NAME)" />
 
   <arg if="$(eval not arg('LOGGER_DEBUG'))" name="STANDALONE" default="$(optenv STANDALONE false)" />
@@ -74,7 +70,6 @@
     <arg name="BODY_DISTURBANCE_X" value="$(arg BODY_DISTURBANCE_X)" />
     <arg name="BODY_DISTURBANCE_Y" value="$(arg BODY_DISTURBANCE_Y)" />
     <arg name="RUN_TYPE" value="$(arg RUN_TYPE)" />
-    <arg name="UAV_TYPE" value="$(arg UAV_TYPE)" />
     <arg name="LOGGER_DEBUG" value="$(arg LOGGER_DEBUG)" />
 
     <arg name="standalone" value="$(arg STANDALONE)" />
@@ -137,7 +132,6 @@
     <arg name="UAV_NAME" value="$(arg UAV_NAME)" />
     <arg name="PROFILER" value="$(arg PROFILER)" />
     <arg name="RUN_TYPE" value="$(arg RUN_TYPE)" />
-    <arg name="UAV_TYPE" value="$(arg UAV_TYPE)" />
     <arg name="LOGGER_DEBUG" value="$(arg LOGGER_DEBUG)" />
 
     <arg name="standalone" value="$(arg STANDALONE)" />
@@ -158,7 +152,6 @@
     <arg name="UAV_NAME" value="$(arg UAV_NAME)" />
     <arg name="PROFILER" value="$(arg PROFILER)" />
     <arg name="RUN_TYPE" value="$(arg RUN_TYPE)" />
-    <arg name="UAV_TYPE" value="$(arg UAV_TYPE)" />
     <arg name="LOGGER_DEBUG" value="$(arg LOGGER_DEBUG)" />
 
     <arg name="standalone" value="$(arg STANDALONE)" />
@@ -180,7 +173,6 @@
     <arg if="$(eval arg('RUN_TYPE') == 'uav')" name="UAV_MASS" value="$(arg UAV_MASS)" />
     <arg name="PROFILER" value="$(arg PROFILER)" />
     <arg name="RUN_TYPE" value="$(arg RUN_TYPE)" />
-    <arg name="UAV_TYPE" value="$(arg UAV_TYPE)" />
     <arg name="LOGGER_DEBUG" value="$(arg LOGGER_DEBUG)" />
 
     <arg name="standalone" value="$(arg STANDALONE)" />
