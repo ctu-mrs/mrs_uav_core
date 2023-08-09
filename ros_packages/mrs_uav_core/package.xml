@@ -15,6 +15,9 @@
   <depend>cmake_modules</depend>
   <depend>rospy</depend>
 
+  <depend version_eq="1.16.666">ros_comm</depend>
+  <depend version_eq="0.7.666">geometry2</depend>
+
   <depend>mrs_msgs</depend>
   <depend>mrs_lib</depend>
   <depend>mrs_uav_hw_api</depend>
