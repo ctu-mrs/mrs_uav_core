@@ -84,16 +84,16 @@ sources:
         target: ros_packages/mrs_uav_controllers
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_general.git
-    name: mrs_uav_general
-    rev: hw_api
+  - repo: https://github.com/ctu-mrs/mrs_uav_autostart.git
+    name: mrs_uav_autostart
+    rev: master
     type: git
     params:
     sparse_paths:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_uav_general
+        target: ros_packages/mrs_uav_autostart
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_managers.git

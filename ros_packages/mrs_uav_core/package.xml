@@ -15,8 +15,8 @@
   <depend>cmake_modules</depend>
   <depend>rospy</depend>
 
-  <depend version_eq="1.16.666">ros_comm</depend>
-  <depend version_eq="0.7.666">geometry2</depend>
+  <depend version_eq="1.16.666-0focal">ros_comm</depend>
+  <depend version_eq="0.7.666-0focal">geometry2</depend>
 
   <depend>mrs_msgs</depend>
   <depend>mrs_lib</depend>
@@ -25,7 +25,7 @@
   <depend>mrs_uav_controllers</depend>
   <depend>mrs_uav_trackers</depend>
   <depend>mrs_uav_state_estimators</depend>
-  <depend>mrs_uav_general</depend>
+  <depend>mrs_uav_autostart</depend>
   <depend>mrs_multirotor_simulator</depend>
   <depend>mrs_rviz_plugins</depend>
   <depend>mrs_uav_trajectory_generation</depend>
