@@ -21,7 +21,7 @@
   <arg name="uav_names_config" default="" />
 
   <arg if="$(eval arg('RUN_TYPE') == 'simulation' and arg('WORLD_FILE') == '' and arg('WORLD_NAME') == '')"  name="world_file" value="$(find mrs_uav_core)/config/world_simulation.yaml" />
-  <arg if="$(eval arg('RUN_TYPE') == 'realworld' and arg('WORLD_FILE') == '' and arg('WORLD_NAME') != '')" name="world_file" value="$(find mrs_uav_deployement)/config/worlds/world_$(arg WORLD_NAME).yaml" />
+  <arg if="$(eval arg('RUN_TYPE') == 'realworld' and arg('WORLD_FILE') == '' and arg('WORLD_NAME') != '')" name="world_file" value="$(find mrs_uav_deployment)/config/worlds/world_$(arg WORLD_NAME).yaml" />
   <arg if="$(eval arg('WORLD_FILE') != '')" name="world_file" value="$(arg WORLD_FILE)" />
   <arg if="$(eval arg('world_config') != '')" name="world_file" value="$(arg world_config)" />
 
