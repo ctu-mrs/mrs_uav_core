@@ -12,10 +12,11 @@ class ParamsGetter:
         rospack = rospkg.RosPack()
 
         packages = [
+            "mrs_uav_managers",
             "mrs_uav_trackers",
             "mrs_uav_controllers",
-            "mrs_uav_managers",
             "mrs_uav_trajectory_generation",
+            "mrs_uav_state_estimators",
         ]
 
         for package in packages:
