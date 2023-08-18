@@ -34,5 +34,7 @@
   <depend>mrs-uav-shell-additions</depend>
   <depend>tmux</depend>
   <depend>tmuxinator</depend>
+  <depend>catkin</depend>
+  <depend>python3-catkin-tools</depend>
 
 </package>
