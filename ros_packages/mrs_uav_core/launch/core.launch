@@ -4,24 +4,23 @@
   <arg name="RUN_TYPE" default="$(optenv RUN_TYPE UNSET)" />
   <arg name="UAV_NAME" default="$(optenv UAV_NAME UNSET)" />
 
+  <!-- check if they are set -->
+  <arg if="$(eval arg('RUN_TYPE') == 'UNSET')" name="SET_RUN_TYPE_ENV_VARIABLE" default="$(env MISSING_RUN_TYPE)" />
+  <arg if="$(eval arg('UAV_NAME') == 'UNSET')" name="SET_UAV_NAME_ENV_VARIABLE" default="$(env MISSING_UAV_NAME)" />
+
     <!-- ====================== optional args ===================== -->
   <arg name="PROFILER" default="$(optenv PROFILER false)" />
   <arg name="BODY_DISTURBANCE_X" default="$(optenv INITIAL_DISTURBANCE_X 0.0)" />
   <arg name="BODY_DISTURBANCE_Y" default="$(optenv INITIAL_DISTURBANCE_Y 0.0)" />
   <arg name="DEBUG" default="$(optenv DEBUG false)" />
   <arg name="LOGGER_DEBUG" default="$(optenv LOGGER_DEBUG false)" />
-  <arg name="WORLD_NAME" default="$(optenv WORLD_NAME)" />
   <arg name="UAV_MASS" default="$(optenv UAV_MASS)" />
 
-    <!-- config files  -->
+  <!-- config files -->
   <arg name="platform_config" default="$(optenv PLATFORM_CONFIG)" />
   <arg name="custom_config" default="$(optenv CUSTOM_CONFIG)" />
   <arg name="world_config" default="$(optenv WORLD_CONFIG)" />
   <arg name="network_config" default="$(optenv NETWORK_CONFIG)" />
-
-    <!-- ============== check for the compulsory args ============= -->
-  <arg if="$(eval arg('RUN_TYPE') == 'UNSET')" name="SET_RUN_TYPE_ENV_VARIABLE" default="$(env MISSING_RUN_TYPE)" />
-  <arg if="$(eval arg('UAV_NAME') == 'UNSET')" name="SET_UAV_NAME_ENV_VARIABLE" default="$(env MISSING_UAV_NAME)" />
 
   <arg if="$(eval not arg('LOGGER_DEBUG'))" name="STANDALONE" default="$(optenv STANDALONE false)" />
   <arg if="$(eval arg('LOGGER_DEBUG'))" name="STANDALONE" default="true" />
@@ -32,8 +31,8 @@
   <arg if="$(eval arg('nodelet_manager') == '')" name="nodelet_manager_name" default="$(arg UAV_NAME)_nodelet_manager" />
   <arg if="$(eval arg('nodelet_manager') != '')" name="nodelet_manager_name" default="$(arg nodelet_manager)" />
 
-    <!-- currently, ROS_MASTER_URI has to be set to http://localhost:11311 otherwise ROS dies when -->
-    <!-- the drone disconnects from wifi -->
+  <!-- check for ROS_MASTER_URI -->
+  <!-- ROS_MASTER_URI has to be set to http://localhost:11311 -->
   <arg if="$(eval arg('RUN_TYPE') == 'realworld')" name="ROS_MASTER_URI" default="$(optenv ROS_MASTER_URI none)" />
   <arg if="$(eval arg('RUN_TYPE') == 'realworld' and arg('ROS_MASTER_URI') != 'http://localhost:11311')" name="SET_YOUR_ROS_MASTER_URI_TO_LOCALHOST" default="$(env MISSING_ROS_MASTER_URI)" />
 
