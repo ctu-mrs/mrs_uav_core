@@ -15,8 +15,8 @@
   <depend>cmake_modules</depend>
   <depend>rospy</depend>
 
-  <depend version_eq="1.16.666-0focal">rosbag</depend>
-  <depend version_eq="0.7.666-0focal">tf2_ros</depend>
+  <depend version_gte="1.16.666">rosbag</depend>
+  <depend version_gte="0.7.666">tf2_ros</depend>
 
   <depend>mrs_msgs</depend>
   <depend>mrs_lib</depend>
