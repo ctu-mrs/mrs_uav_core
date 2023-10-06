@@ -1,17 +1,22 @@
 # The MRS UAV System Core
 
-| ROS Package                                                                               | 20.04 Unstable build status                                                                                                                                                         |
-|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [mrs_lib](https://github.com/ctu-mrs/mrs_lib)                                             | [![Build Status](https://github.com/ctu-mrs/mrs_lib/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_lib/actions)                                             |
-| [mrs_msgs](https://github.com/ctu-mrs/mrs_msgs)                                           | [![Build Status](https://github.com/ctu-mrs/mrs_msgs/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_msgs/actions)                                           |
-| [mrs_multirotor_simulator](https://github.com/ctu-mrs/mrs_multirotor_simulator)           | [![Build Status](https://github.com/ctu-mrs/mrs_multirotor_simulator/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_multirotor_simulator/actions)           |
-| [mrs_rviz_plugins](https://github.com/ctu-mrs/mrs_rviz_plugins)                           | [![Build Status](https://github.com/ctu-mrs/mrs_rviz_plugins/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_rviz_plugins/actions)                           |
-| [mrs_uav_controllers](https://github.com/ctu-mrs/mrs_uav_controllers)                     | [![Build Status](https://github.com/ctu-mrs/mrs_uav_controllers/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_uav_controllers/actions)                     |
-| [mrs_uav_core](https://github.com/ctu-mrs/mrs_uav_core)                                   | [![Build Status](https://github.com/ctu-mrs/mrs_uav_core/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_uav_core/actions)                                   |
-| [mrs_uav_autostart](https://github.com/ctu-mrs/mrs_uav_autostart)                         | [![Build Status](https://github.com/ctu-mrs/mrs_uav_autostart/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_uav_autostart/actions)                         |
-| [mrs_uav_hw_api](https://github.com/ctu-mrs/mrs_uav_hw_api)                               | [![Build Status](https://github.com/ctu-mrs/mrs_uav_hw_api/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_uav_hw_api/actions)                               |
-| [mrs_uav_managers](https://github.com/ctu-mrs/mrs_uav_managers)                           | [![Build Status](https://github.com/ctu-mrs/mrs_uav_managers/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_uav_managers/actions)                           |
-| [mrs_uav_state_estimators](https://github.com/ctu-mrs/mrs_uav_state_estimators)           | [![Build Status](https://github.com/ctu-mrs/mrs_uav_state_estimators/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_uav_state_estimators/actions)           |
-| [mrs_uav_status](https://github.com/ctu-mrs/mrs_uav_status)                               | [![Build Status](https://github.com/ctu-mrs/mrs_uav_status/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_uav_status/actions)                               |
-| [mrs_uav_trackers](https://github.com/ctu-mrs/mrs_uav_trackers)                           | [![Build Status](https://github.com/ctu-mrs/mrs_uav_trackers/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_uav_trackers/actions)                           |
-| [mrs_uav_trajectory_generation](https://github.com/ctu-mrs/mrs_uav_trajectory_generation) | [![Build Status](https://github.com/ctu-mrs/mrs_uav_trajectory_generation/workflows/ros_package_build/badge.svg)](https://github.com/ctu-mrs/mrs_uav_trajectory_generation/actions) |
+## Installation
+
+The core is installed as a part of the [MRS UAV System](https://github.com/ctu-mrs/mrs_uav_system#installation).
+
+## Submodules
+
+| Repository                                                                                |
+|-------------------------------------------------------------------------------------------|
+| [mrs_lib](https://github.com/ctu-mrs/mrs_lib)                                             |
+| [mrs_msgs](https://github.com/ctu-mrs/mrs_msgs)                                           |
+| [mrs_multirotor_simulator](https://github.com/ctu-mrs/mrs_multirotor_simulator)           |
+| [mrs_rviz_plugins](https://github.com/ctu-mrs/mrs_rviz_plugins)                           |
+| [mrs_uav_controllers](https://github.com/ctu-mrs/mrs_uav_controllers)                     |
+| [mrs_uav_autostart](https://github.com/ctu-mrs/mrs_uav_autostart)                         |
+| [mrs_uav_hw_api](https://github.com/ctu-mrs/mrs_uav_hw_api)                               |
+| [mrs_uav_managers](https://github.com/ctu-mrs/mrs_uav_managers)                           |
+| [mrs_uav_state_estimators](https://github.com/ctu-mrs/mrs_uav_state_estimators)           |
+| [mrs_uav_status](https://github.com/ctu-mrs/mrs_uav_status)                               |
+| [mrs_uav_trackers](https://github.com/ctu-mrs/mrs_uav_trackers)                           |
+| [mrs_uav_trajectory_generation](https://github.com/ctu-mrs/mrs_uav_trajectory_generation) |
