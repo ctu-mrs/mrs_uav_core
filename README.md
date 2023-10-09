@@ -4,6 +4,26 @@
 
 The core is installed as a part of the [MRS UAV System](https://github.com/ctu-mrs/mrs_uav_system#installation).
 
+## Contents
+
+The core takes care of the collowing aspects of the autonomous UAV flight:
+
+* hardware abstraction,
+* state estimation,
+* feedback control,
+* reference generation,
+* trajectory generation,
+* flight management,
+* takeoff and landing,
+* plugin interfaces for *feedback controllers*, *reference trackers*, *state estimators*, and *hardware api*.
+
+Moreover, the core provides
+
+* MRS libraries,
+* MRS ROS messages,
+* MRS Rviz plugins,
+* MRS multirotor simulator.
+
 ## Submodules
 
 | Repository                                                                                |
