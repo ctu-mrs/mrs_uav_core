@@ -38,7 +38,7 @@ sources:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_lib.git
     name: mrs_lib
-    rev: hw_api
+    rev: master
     type: git
     params:
     sparse_paths:
@@ -50,7 +50,7 @@ sources:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_msgs.git
     name: mrs_msgs
-    rev: hw_api
+    rev: master
     type: git
     params:
     sparse_paths:
@@ -62,7 +62,7 @@ sources:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_rviz_plugins.git
     name: mrs_rviz_plugins
-    rev: hw_api
+    rev: master
     type: git
     params:
     sparse_paths:
@@ -74,7 +74,7 @@ sources:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_controllers.git
     name: mrs_uav_controllers
-    rev: hw_api
+    rev: master
     type: git
     params:
     sparse_paths:
@@ -98,7 +98,7 @@ sources:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_managers.git
     name: mrs_uav_managers
-    rev: hw_api
+    rev: master
     type: git
     params:
     sparse_paths:
@@ -110,7 +110,7 @@ sources:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_status.git
     name: mrs_uav_status
-    rev: hw_api
+    rev: master
     type: git
     params:
     sparse_paths:
@@ -122,7 +122,7 @@ sources:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_trackers.git
     name: mrs_uav_trackers
-    rev: hw_api
+    rev: master
     type: git
     params:
     sparse_paths:
@@ -134,7 +134,7 @@ sources:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_trajectory_generation
     name: mrs_uav_trajectory_generation
-    rev: hw_api
+    rev: master
     type: git
     params:
     sparse_paths:
