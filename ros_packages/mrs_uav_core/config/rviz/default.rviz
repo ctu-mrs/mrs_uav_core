@@ -1,13 +1,13 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 75
+    Help Height: 70
     Name: Displays
     Property Tree Widget:
       Expanded:
         - /TF1/Frames1
         - /TF1/Tree1
       Splitter Ratio: 0.6581196784973145
-    Tree Height: 286
+    Tree Height: 291
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -114,15 +114,6 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
-    - Class: ""
-      Enable Transparency: true
-      Enabled: true
-      Name: Control Display
-      Show Axes: false
-      Show Descriptions: true
-      Show Visual Aids: false
-      Update Topic: control/update
-      Value: true
     - Background color: 204; 204; 204
       Class: mrs_rviz_plugins/Status
       Computer load: true
@@ -434,6 +425,15 @@ Visualization Manager:
           Value: true
       Enabled: true
       Name: TrajectoryGeneration
+    - Class: ""
+      Enable Transparency: true
+      Enabled: true
+      Name: Control Display
+      Show Axes: false
+      Show Descriptions: true
+      Show Visual Aids: false
+      Update Topic: control/update
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 255; 255; 255
@@ -483,17 +483,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.4605097770690918
-        Y: -0.6487909555435181
-        Z: 1.265869379043579
+        X: 0.39122292399406433
+        Y: -0.7975999116897583
+        Z: 1.073111891746521
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.21039855480194092
+      Pitch: 0.19539856910705566
       Target Frame: uav1/fcu
-      Yaw: 2.9653992652893066
+      Yaw: 2.940398693084717
     Saved: ~
 Window Geometry:
   Displays:
