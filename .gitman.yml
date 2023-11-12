@@ -24,7 +24,7 @@ sources:
         target: ros_packages/mrs_uav_state_estimators
     scripts:
       - git submodule update --init --recursive
-  - repo: git@github.com:ctu-mrs/mrs_uav_hw_api.git
+  - repo: https://github.com/ctu-mrs/mrs_uav_hw_api.git
     name: mrs_uav_hw_api
     rev: master
     type: git
