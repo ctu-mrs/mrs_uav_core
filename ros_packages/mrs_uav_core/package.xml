@@ -38,5 +38,6 @@
   <depend>tmuxinator</depend>
   <depend>catkin</depend>
   <depend>python3-catkin-tools</depend>
+  <depend>moreutils</depend>
 
 </package>
