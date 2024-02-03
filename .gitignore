@@ -2,3 +2,4 @@
 *.swp
 
 ros_packages/.gitman
+.gitman
