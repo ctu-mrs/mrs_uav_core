@@ -9,7 +9,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_multirotor_simulator
+        target: mrs_multirotor_simulator
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_state_estimators.git
@@ -21,7 +21,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_uav_state_estimators
+        target: mrs_uav_state_estimators
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_hw_api.git
@@ -33,7 +33,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_uav_hw_api
+        target: mrs_uav_hw_api
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_lib.git
@@ -45,7 +45,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_lib
+        target: mrs_lib
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_msgs.git
@@ -57,7 +57,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_msgs
+        target: mrs_msgs
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_rviz_plugins.git
@@ -69,7 +69,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_rviz_plugins
+        target: mrs_rviz_plugins
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_controllers.git
@@ -81,7 +81,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_uav_controllers
+        target: mrs_uav_controllers
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_autostart.git
@@ -93,7 +93,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_uav_autostart
+        target: mrs_uav_autostart
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_managers.git
@@ -105,7 +105,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_uav_managers
+        target: mrs_uav_managers
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_status.git
@@ -117,7 +117,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_uav_status
+        target: mrs_uav_status
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_trackers.git
@@ -129,7 +129,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_uav_trackers
+        target: mrs_uav_trackers
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_trajectory_generation
@@ -141,7 +141,7 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_uav_trajectory_generation
+        target: mrs_uav_trajectory_generation
     scripts:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_testing
@@ -153,6 +153,6 @@ sources:
       -
     links:
       - source: ''
-        target: ros_packages/mrs_uav_testing
+        target: mrs_uav_testing
     scripts:
       - git submodule update --init --recursive
