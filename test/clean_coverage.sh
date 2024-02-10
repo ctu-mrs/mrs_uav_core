@@ -24,11 +24,3 @@ for FILE in $OLD_FILES; do
   echo "$0: removing old coverage file '$FILE'"
   rm $FILE
 done
-
-cd $ORIGINAL_PATH
-
-# build the package
-catkin build # it has to be fully built normally before building with --catkin-make-args tests
-catkin build --catkin-make-args tests
-
-catkin test -i -p 1 -s
