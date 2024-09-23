@@ -1,158 +1,158 @@
 location: .gitman
-sources:
-  - repo: https://github.com/ctu-mrs/mrs_multirotor_simulator
-    name: mrs_multirotor_simulator
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_multirotor_simulator
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_state_estimators.git
-    name: mrs_uav_state_estimators
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_uav_state_estimators
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_hw_api.git
-    name: mrs_uav_hw_api
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_uav_hw_api
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_lib.git
-    name: mrs_lib
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_lib
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_msgs.git
-    name: mrs_msgs
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_msgs
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_rviz_plugins.git
-    name: mrs_rviz_plugins
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_rviz_plugins
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_controllers.git
-    name: mrs_uav_controllers
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_uav_controllers
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_autostart.git
-    name: mrs_uav_autostart
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_uav_autostart
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_managers.git
-    name: mrs_uav_managers
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_uav_managers
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_status.git
-    name: mrs_uav_status
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_uav_status
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_trackers.git
-    name: mrs_uav_trackers
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_uav_trackers
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_trajectory_generation
-    name: mrs_uav_trajectory_generation
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_uav_trajectory_generation
-    scripts:
-      - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_testing
-    name: mrs_uav_testing
-    rev: master
-    type: git
-    params:
-    sparse_paths:
-      -
-    links:
-      - source: ''
-        target: mrs_uav_testing
-    scripts:
-      - git submodule update --init --recursive
+# sources:
+#   - repo: https://github.com/ctu-mrs/mrs_multirotor_simulator
+#     name: mrs_multirotor_simulator
+#     rev: master
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_multirotor_simulator
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/ctu-mrs/mrs_uav_state_estimators.git
+#     name: mrs_uav_state_estimators
+#     rev: master
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_uav_state_estimators
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/ctu-mrs/mrs_uav_hw_api.git
+#     name: mrs_uav_hw_api
+#     rev: master
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_uav_hw_api
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/MarlonRiv/mrs_lib.git
+#     name: mrs_lib
+#     rev: safety_area_manager
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_lib
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/MarlonRiv/mrs_msgs.git
+#     name: mrs_msgs
+#     rev: safety_area_manager 
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_msgs
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/MarlonRiv/mrs_rviz_plugins.git
+#     name: mrs_rviz_plugins
+#     rev: control 
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_rviz_plugins
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/ctu-mrs/mrs_uav_controllers.git
+#     name: mrs_uav_controllers
+#     rev: master
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_uav_controllers
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/ctu-mrs/mrs_uav_autostart.git
+#     name: mrs_uav_autostart
+#     rev: master
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_uav_autostart
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/MarlonRiv/mrs_uav_managers.git
+#     name: mrs_uav_managers
+#     rev: safety_area_manager 
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_uav_managers
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/ctu-mrs/mrs_uav_status.git
+#     name: mrs_uav_status
+#     rev: master
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_uav_status
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/ctu-mrs/mrs_uav_trackers.git
+#     name: mrs_uav_trackers
+#     rev: master
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_uav_trackers
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/ctu-mrs/mrs_uav_trajectory_generation
+#     name: mrs_uav_trajectory_generation
+#     rev: master
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_uav_trajectory_generation
+#     scripts:
+#       - git submodule update --init --recursive
+#   - repo: https://github.com/ctu-mrs/mrs_uav_testing
+#     name: mrs_uav_testing
+#     rev: master
+#     type: git
+#     params:
+#     sparse_paths:
+#       -
+#     links:
+#       - source: ''
+#         target: mrs_uav_testing
+#     scripts:
+#       - git submodule update --init --recursive
