@@ -326,6 +326,50 @@ Visualization Manager:
       Name: ControlManager
     - Class: rviz/Group
       Displays:
+        - Class: rviz/InteractiveMarkers
+          Enabled: true
+          Marker Topic: /uav1/safety_area_manager/safety_area_bounds_out/update 
+          Name: SafetyAreaBounds
+          Show Descriptions: true 
+          Show Axes: false
+          Show Visual Aids: false
+          Enabled transparency: true
+        - Class: rviz/InteractiveMarkers
+          Enabled: true
+          Marker Topic: /uav1/safety_area_manager/safety_area_center_out/update 
+          Name: SafetyAreaCenter
+          Show Descriptions: true 
+          Show Axes: false
+          Show Visual Aids: false
+          Enabled transparency: true
+        - Class: rviz/InteractiveMarkers
+          Enabled: true
+          Marker Topic: /uav1/safety_area_manager/safety_area_edges_out/update 
+          Name: SafetyAreaEdges
+          Show Descriptions: true 
+          Show Axes: false
+          Show Visual Aids: false
+          Enabled transparency: true
+        - Class: rviz/InteractiveMarkers
+          Enabled: true
+          Marker Topic: /uav1/safety_area_manager/safety_area_vertices_out/update 
+          Name: SafetyAreaVertices
+          Show Descriptions: true 
+          Show Axes: false
+          Show Visual Aids: false
+          Enabled transparency: true
+        - Class: rviz/MarkerArray
+          Enabled: true
+          Marker Topic: /uav1/safety_area_manager/safety_area_static_markers_out
+          Name: StaticMarkers 
+          Namespaces:
+            "": true
+          Queue Size: 100
+          Value: true
+      Enabled: true
+      Name: SafetyAreaManager
+    - Class: rviz/Group
+      Displays:
         - Angle Tolerance: 0.009999999776482582
           Class: rviz/Odometry
           Covariance:
