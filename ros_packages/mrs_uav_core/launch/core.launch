@@ -200,4 +200,11 @@
 
   <!-- //} -->
 
+  <!-- MRS Status //{ -->
+
+  <include file="$(find mrs_uav_status)/launch/acquisition.launch" >
+  </include>
+
+  <!-- //} -->
+
 </launch>
