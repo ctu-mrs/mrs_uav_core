@@ -200,4 +200,15 @@
 
   <!-- //} -->
 
+  <!-- MRS Status //{ -->
+
+  <include file="$(find mrs_uav_status)/launch/acquisition.launch" >
+
+    <arg name="UAV_NAME" value="$(arg UAV_NAME)" />
+    <arg name="RUN_TYPE" value="$(arg RUN_TYPE)" />
+
+  </include>
+
+  <!-- //} -->
+
 </launch>
