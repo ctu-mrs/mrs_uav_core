@@ -328,36 +328,36 @@ Visualization Manager:
       Displays:
         - Class: rviz/InteractiveMarkers
           Enabled: true
-          Marker Topic: /uav1/safety_area_manager/safety_area_bounds_out/update 
+          Update Topic: /uav1/safety_area_manager/safety_area_bounds_out/update 
           Name: SafetyAreaBounds
           Show Descriptions: true 
           Show Axes: false
           Show Visual Aids: false
-          Enabled transparency: true
+          Enable Transparency: true
         - Class: rviz/InteractiveMarkers
           Enabled: true
-          Marker Topic: /uav1/safety_area_manager/safety_area_center_out/update 
+          Update Topic: /uav1/safety_area_manager/safety_area_center_out/update 
           Name: SafetyAreaCenter
           Show Descriptions: true 
           Show Axes: false
           Show Visual Aids: false
-          Enabled transparency: true
+          Enable Transparency: true
         - Class: rviz/InteractiveMarkers
           Enabled: true
-          Marker Topic: /uav1/safety_area_manager/safety_area_edges_out/update 
+          Update Topic: /uav1/safety_area_manager/safety_area_edges_out/update 
           Name: SafetyAreaEdges
           Show Descriptions: true 
           Show Axes: false
           Show Visual Aids: false
-          Enabled transparency: true
+          Enable Transparency: true
         - Class: rviz/InteractiveMarkers
           Enabled: true
-          Marker Topic: /uav1/safety_area_manager/safety_area_vertices_out/update 
+          Update Topic: /uav1/safety_area_manager/safety_area_vertices_out/update 
           Name: SafetyAreaVertices
           Show Descriptions: true 
           Show Axes: false
           Show Visual Aids: false
-          Enabled transparency: true
+          Enable Transparency: true
         - Class: rviz/MarkerArray
           Enabled: true
           Marker Topic: /uav1/safety_area_manager/safety_area_static_markers_out
