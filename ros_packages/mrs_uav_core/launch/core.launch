@@ -225,6 +225,9 @@
     <arg name="UAV_NAME" value="$(arg UAV_NAME)" />
     <arg name="RUN_TYPE" value="$(arg RUN_TYPE)" />
 
+    <arg name="platform_config" value="$(arg platform_config)" />
+    <arg name="custom_config" value="$(arg custom_config)" />
+
   </include>
 
   <!-- //} -->

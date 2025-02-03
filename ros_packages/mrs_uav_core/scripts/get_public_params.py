@@ -17,6 +17,7 @@ class ParamsGetter:
             "mrs_uav_controllers",
             "mrs_uav_trajectory_generation",
             "mrs_uav_state_estimators",
+            "mrs_uav_status",
         ]
 
         for package in packages:
