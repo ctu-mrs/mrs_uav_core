@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
-<package format="2">
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
 
   <name>mrs_uav_core</name>
-  <version>1.0.0</version>
-  <description>The MRS UAV Core metapackage</description>
+
+  <version>2.0.0</version>
+  <description>MRS UAV Core</description>
 
   <author email="tomas.baca@fel.cvut.cz">Tomas Baca</author>
   <maintainer email="tomas.baca@fel.cvut.cz">Tomas Baca</maintainer>
 
-  <license>BSD 3-Clause</license>
+  <license>TODO: License declaration</license>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <depend>cmake_modules</depend>
-  <depend>rospy</depend>
-
-  <depend version_gte="1.16.666">rosbag</depend>
-  <depend version_gte="0.7.666">tf2_ros</depend>
-  <depend version_gte="0.7.666">tf2</depend>
+  <depend>rclcpp</depend>
+  <depend>launch</depend>
+  <depend>launch_ros</depend>
+  <depend>builtin_interfaces</depend>
 
   <depend>mrs_msgs</depend>
   <depend>mrs_lib</depend>
@@ -26,18 +26,18 @@
   <depend>mrs_uav_controllers</depend>
   <depend>mrs_uav_trackers</depend>
   <depend>mrs_uav_state_estimators</depend>
-  <depend>mrs_uav_autostart</depend>
   <depend>mrs_multirotor_simulator</depend>
-  <depend>mrs_rviz_plugins</depend>
-  <depend>mrs_uav_trajectory_generation</depend>
-  <depend>mrs_uav_status</depend>
-  <depend>mrs_uav_testing</depend>
+  <!-- <depend>mrs_uav_autostart</depend> -->
+  <!-- <depend>mrs_rviz_plugins</depend> -->
+  <!-- <depend>mrs_uav_trajectory_generation</depend> -->
+  <!-- <depend>mrs_uav_status</depend> -->
+  <!-- <depend>mrs_uav_testing</depend> -->
 
-  <depend>mrs-uav-shell-additions</depend>
   <depend>tmux</depend>
   <depend>tmuxinator</depend>
-  <depend>catkin</depend>
-  <depend>python3-catkin-tools</depend>
-  <depend>moreutils</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 
 </package>
