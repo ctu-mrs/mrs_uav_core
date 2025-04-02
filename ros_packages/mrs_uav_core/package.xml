@@ -19,6 +19,8 @@
   <depend>launch_ros</depend>
   <depend>builtin_interfaces</depend>
 
+  <depend>rmw_zenoh_cpp</depend>
+
   <depend>mrs_msgs</depend>
   <depend>mrs_lib</depend>
   <depend>mrs_uav_hw_api</depend>

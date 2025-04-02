@@ -96,3 +96,103 @@ sources:
         target: mrs_uav_trackers
     scripts:
       - git submodule update --init --recursive
+sources_locked:
+  - repo: https://github.com/ctu-mrs/mrs_multirotor_simulator
+    name: mrs_multirotor_simulator
+    rev: 4897df62d7eed79870520c406d62e60342da3243
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: mrs_multirotor_simulator
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/ctu-mrs/mrs_uav_state_estimators.git
+    name: mrs_uav_state_estimators
+    rev: 80a2e2b9ffaa32e127ca70efa9b4a803f27c1b32
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: mrs_uav_state_estimators
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/ctu-mrs/mrs_uav_hw_api.git
+    name: mrs_uav_hw_api
+    rev: 3ecbe9b4fe2f66b22a8a25b78676cf0d8256574f
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: mrs_uav_hw_api
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/ctu-mrs/mrs_lib.git
+    name: mrs_lib
+    rev: 9de280006615fe5c04d2fe1f85f3f3da3a59d069
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: mrs_lib
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/ctu-mrs/mrs_msgs.git
+    name: mrs_msgs
+    rev: 0625a01e54784dd2632ac49f696d49abbded7e12
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: mrs_msgs
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/ctu-mrs/mrs_uav_controllers.git
+    name: mrs_uav_controllers
+    rev: c4b8a6c0c79cd7b7c86bdb81ed6b15e6f35b340c
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: mrs_uav_controllers
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/ctu-mrs/mrs_uav_managers.git
+    name: mrs_uav_managers
+    rev: 365e78863d12826273d819b956797ba18d9d2d1e
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: mrs_uav_managers
+    scripts:
+      - git submodule update --init --recursive
+  - repo: https://github.com/ctu-mrs/mrs_uav_trackers.git
+    name: mrs_uav_trackers
+    rev: 60e53c01e95a88ed2bb422ff6d950c0c228f66b2
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: mrs_uav_trackers
+    scripts:
+      - git submodule update --init --recursive
+default_group: ''
+groups:
+  -
