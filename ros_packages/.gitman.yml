@@ -96,3 +96,15 @@ sources:
         target: mrs_uav_trackers
     scripts:
       - git submodule update --init --recursive
+  - repo: https://github.com/ctu-mrs/mrs_uav_autostart.git
+    name: mrs_uav_autostart
+    rev: ros2
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: mrs_uav_autostart
+    scripts:
+      - git submodule update --init --recursive
