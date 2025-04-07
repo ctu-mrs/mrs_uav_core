@@ -149,7 +149,6 @@ def generate_launch_description():
         executable='component_container_mt',
         output="screen",
         parameters=[
-            {'thread_num': 16},
             {'use_intra_process_comms': True},
             ],
         condition=UnlessCondition(standalone)
@@ -164,7 +163,7 @@ def generate_launch_description():
             ]),
             launch_arguments={
                 'custom_config': custom_config,
-                'platforom_config': platform_config,
+                'platform_config': platform_config,
                 'world_config': world_config,
                 'network_config': network_config,
                 'standalone': standalone,
@@ -180,7 +179,7 @@ def generate_launch_description():
             ]),
             launch_arguments={
                 'custom_config': custom_config,
-                'platforom_config': platform_config,
+                'platform_config': platform_config,
                 'world_config': world_config,
                 'network_config': network_config,
                 'standalone': standalone,
@@ -196,7 +195,7 @@ def generate_launch_description():
             ]),
             launch_arguments={
                 'custom_config': custom_config,
-                'platforom_config': platform_config,
+                'platform_config': platform_config,
                 'world_config': world_config,
                 'network_config': network_config,
                 'standalone': standalone,
@@ -212,7 +211,7 @@ def generate_launch_description():
             ]),
             launch_arguments={
                 'custom_config': custom_config,
-                'platforom_config': platform_config,
+                'platform_config': platform_config,
                 'world_config': world_config,
                 'network_config': network_config,
                 'standalone': standalone,
@@ -228,7 +227,7 @@ def generate_launch_description():
             ]),
             launch_arguments={
                 'custom_config': custom_config,
-                'platforom_config': platform_config,
+                'platform_config': platform_config,
                 'world_config': world_config,
                 'network_config': network_config,
                 'standalone': standalone,
