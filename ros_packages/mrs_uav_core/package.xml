@@ -38,6 +38,8 @@
   <depend>tmux</depend>
   <depend>tmuxinator</depend>
 
+  <depend>mrs-uav-shell-additions</depend>
+
   <export>
     <build_type>ament_cmake</build_type>
   </export>
