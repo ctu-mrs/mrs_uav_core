@@ -223,6 +223,22 @@ def generate_launch_description():
     ld.add_action(
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
+                FindPackageShare('mrs_uav_managers'), '/launch/gain_manager.py'
+            ]),
+            launch_arguments={
+                'custom_config': custom_config,
+                'platform_config': platform_config,
+                'world_config': world_config,
+                'network_config': network_config,
+                'standalone': standalone,
+                'container_name': container_name,
+            }.items()
+        )
+    )
+
+    ld.add_action(
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([
                 FindPackageShare('mrs_uav_managers'), '/launch/estimation_manager.py'
             ]),
             launch_arguments={
