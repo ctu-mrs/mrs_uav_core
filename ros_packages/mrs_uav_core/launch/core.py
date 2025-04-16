@@ -252,4 +252,18 @@ def generate_launch_description():
         )
     )
 
+    ld.add_action(
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([
+                FindPackageShare('mrs_uav_trajectory_generation'), '/launch/trajectory_generation.py'
+            ]),
+            launch_arguments={
+                'custom_config': custom_config,
+                'platform_config': platform_config,
+                'standalone': standalone,
+                'container_name': container_name,
+            }.items()
+        )
+    )
+
     return ld

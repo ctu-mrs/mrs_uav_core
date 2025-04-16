@@ -120,3 +120,16 @@ sources:
         target: mrs_uav_testing
     scripts:
       - git submodule update --init --recursive
+  - repo: https://github.com/ctu-mrs/mrs_uav_trajectory_generation.git
+    name: mrs_uav_trajectory_generation
+    rev: ros2
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: mrs_uav_trajectory_generation
+    scripts:
+      - git submodule update --init --recursive
+
