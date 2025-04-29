@@ -149,7 +149,8 @@ def generate_launch_description():
         executable='component_container_mt',
         output="screen",
         parameters=[
-            {'use_intra_process_comms': True},
+                {'use_intra_process_comms': True},
+                {'thread_num': os.cpu_count()},
             ],
         condition=UnlessCondition(standalone)
     )
