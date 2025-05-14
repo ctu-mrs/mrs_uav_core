@@ -138,6 +138,27 @@ def generate_launch_description():
 
     # #} end of network_config
 
+    # #{ debug
+
+    # debug = LaunchConfiguration('debug')
+
+    # # this adds the args to the list of args available for this launch files
+    # # these args can be listed at runtime using -s flag
+    # # default_value is required to if the arg is supposed to be optional at launch time
+    # ld.add_action(DeclareLaunchArgument(
+    #     'debug',
+    #     default_value="false",
+    #     description="Path to the custom configuration file. The path can be absolute, starting with '/' or relative to the current working directory",
+    #     ))
+
+    # debug = IfElseSubstitution(
+    #         condition=PythonExpression(['"', debug, '" == "true"']),
+    #         if_value="debug_roslaunch " + os.ttyname(sys.stdout.fileno()),
+    #         else_value=""
+    #         )
+
+    # #} end of debug
+
     uav_name=os.getenv('UAV_NAME', "uav1")
 
     container_name = "/" + uav_name + "/uav_core_container"
@@ -152,6 +173,7 @@ def generate_launch_description():
                 {'use_intra_process_comms': True},
                 {'thread_num': os.cpu_count()},
             ],
+        # prefix=[debug],
         condition=UnlessCondition(standalone)
     )
 
