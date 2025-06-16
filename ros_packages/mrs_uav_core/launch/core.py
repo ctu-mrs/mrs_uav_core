@@ -171,6 +171,18 @@ def generate_launch_description():
 
     # #} end of debug
 
+    # #{ use_sim_time
+
+    use_sim_time = LaunchConfiguration('use_sim_time')
+
+    ld.add_action(DeclareLaunchArgument(
+        'use_sim_time',
+        default_value=os.getenv('USE_SIM_TIME', "false"),
+        description="Should the node subscribe to sim time?",
+    ))
+
+    # #} end of custom_config
+
     container_name = ["/", uav_name, "/uav_core_container"]
 
     core_container = ComposableNodeContainer(
@@ -182,6 +194,7 @@ def generate_launch_description():
         parameters=[
                 {'use_intra_process_comms': True},
                 {'thread_num': os.cpu_count()},
+                {'use_sim_time': use_sim_time},
             ],
         # prefix=[debug],
         condition=UnlessCondition(standalone)
@@ -195,6 +208,7 @@ def generate_launch_description():
                 FindPackageShare('mrs_uav_managers'), '/launch/control_manager.py'
             ]),
             launch_arguments={
+                'use_sim_time': use_sim_time,
                 'custom_config': custom_config,
                 'platform_config': platform_config,
                 'world_config': world_config,
@@ -211,6 +225,7 @@ def generate_launch_description():
                 FindPackageShare('mrs_uav_managers'), '/launch/uav_manager.py'
             ]),
             launch_arguments={
+                'use_sim_time': use_sim_time,
                 'custom_config': custom_config,
                 'platform_config': platform_config,
                 'world_config': world_config,
@@ -227,6 +242,7 @@ def generate_launch_description():
                 FindPackageShare('mrs_uav_managers'), '/launch/transform_manager.py'
             ]),
             launch_arguments={
+                'use_sim_time': use_sim_time,
                 'custom_config': custom_config,
                 'platform_config': platform_config,
                 'world_config': world_config,
@@ -243,6 +259,7 @@ def generate_launch_description():
                 FindPackageShare('mrs_uav_managers'), '/launch/constraint_manager.py'
             ]),
             launch_arguments={
+                'use_sim_time': use_sim_time,
                 'custom_config': custom_config,
                 'platform_config': platform_config,
                 'world_config': world_config,
@@ -259,6 +276,7 @@ def generate_launch_description():
                 FindPackageShare('mrs_uav_managers'), '/launch/gain_manager.py'
             ]),
             launch_arguments={
+                'use_sim_time': use_sim_time,
                 'custom_config': custom_config,
                 'platform_config': platform_config,
                 'world_config': world_config,
@@ -275,6 +293,7 @@ def generate_launch_description():
                 FindPackageShare('mrs_uav_managers'), '/launch/estimation_manager.py'
             ]),
             launch_arguments={
+                'use_sim_time': use_sim_time,
                 'custom_config': custom_config,
                 'platform_config': platform_config,
                 'world_config': world_config,
@@ -291,6 +310,7 @@ def generate_launch_description():
                 FindPackageShare('mrs_uav_trajectory_generation'), '/launch/trajectory_generation.py'
             ]),
             launch_arguments={
+                'use_sim_time': use_sim_time,
                 'custom_config': custom_config,
                 'platform_config': platform_config,
                 'standalone': standalone,
