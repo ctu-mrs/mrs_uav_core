@@ -24,6 +24,18 @@ def generate_launch_description():
 
     ld = launch.LaunchDescription()
 
+    # #{ uav_name
+
+    uav_name = LaunchConfiguration('uav_name')
+
+    ld.add_action(DeclareLaunchArgument(
+        'uav_name',
+        default_value=os.getenv('UAV_NAME', "uav1"),
+        description="The uav name used for namespacing.",
+    ))
+
+    # #} end of custom_config
+
     # #{ standalone
 
     standalone = LaunchConfiguration('standalone')
@@ -159,9 +171,7 @@ def generate_launch_description():
 
     # #} end of debug
 
-    uav_name=os.getenv('UAV_NAME', "uav1")
-
-    container_name = "/" + uav_name + "/uav_core_container"
+    container_name = ["/", uav_name, "/uav_core_container"]
 
     core_container = ComposableNodeContainer(
         namespace=uav_name,
