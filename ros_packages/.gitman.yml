@@ -132,4 +132,15 @@ sources:
         target: mrs_uav_trajectory_generation
     scripts:
       - git submodule update --init --recursive
-
+  - repo: https://github.com/ctu-mrs/mrs_uav_status.git
+    name: mrs_uav_status
+    rev: master
+    type: git
+    params:
+    sparse_paths:
+      -
+    links:
+      - source: ''
+        target: mrs_uav_status
+    scripts:
+      - git submodule update --init --recursive
