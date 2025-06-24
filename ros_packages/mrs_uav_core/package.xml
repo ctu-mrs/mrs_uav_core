@@ -31,9 +31,9 @@
   <depend>mrs_multirotor_simulator</depend>
   <depend>mrs_uav_autostart</depend>
   <depend>mrs_uav_trajectory_generation</depend>
+  <depend>mrs_uav_status</depend>
+  <depend>mrs_uav_testing</depend>
   <!-- <depend>mrs_rviz_plugins</depend> -->
-  <!-- <depend>mrs_uav_status</depend> -->
-  <!-- <depend>mrs_uav_testing</depend> -->
 
   <depend>tmux</depend>
   <depend>tmuxinator</depend>
