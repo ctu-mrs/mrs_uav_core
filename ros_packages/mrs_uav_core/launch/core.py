@@ -319,4 +319,19 @@ def generate_launch_description():
         )
     )
 
+    ld.add_action(
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([
+                FindPackageShare('mrs_uav_status'), '/launch/acquisition.py'
+            ]),
+            launch_arguments={
+                'use_sim_time': use_sim_time,
+                'custom_config': custom_config,
+                'platform_config': platform_config,
+                'standalone': standalone,
+                'container_name': container_name,
+            }.items()
+        )
+    )
+
     return ld
