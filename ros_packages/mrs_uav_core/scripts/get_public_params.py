@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 
 import rospkg
-import os
-import roslaunch
 import subprocess
 
 class ParamsGetter:
@@ -22,7 +20,7 @@ class ParamsGetter:
 
         for package in packages:
 
-            s = subprocess.check_output("rosrun {} get_public_params.py".format(package), shell = True)
+            s = subprocess.check_output("ros2 run {} get_public_params.py".format(package), shell = True)
             print(s.decode("utf-8"))
 
 if __name__ == '__main__':

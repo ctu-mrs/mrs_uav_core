@@ -43,7 +43,7 @@ install(
 install(
   DIRECTORY scripts
   USE_SOURCE_PERMISSIONS
-  DESTINATION share/${PROJECT_NAME}
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 ament_package()
