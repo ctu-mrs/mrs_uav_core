@@ -205,7 +205,7 @@ def generate_launch_description():
     ld.add_action(
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
-                FindPackageShare('mrs_uav_managers'), '/launch/control_manager.py'
+                FindPackageShare('mrs_uav_managers'), '/launch/control_manager.launch.py'
             ]),
             launch_arguments={
                 'use_sim_time': use_sim_time,
@@ -222,7 +222,7 @@ def generate_launch_description():
     ld.add_action(
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
-                FindPackageShare('mrs_uav_managers'), '/launch/uav_manager.py'
+                FindPackageShare('mrs_uav_managers'), '/launch/uav_manager.launch.py'
             ]),
             launch_arguments={
                 'use_sim_time': use_sim_time,
@@ -239,7 +239,7 @@ def generate_launch_description():
     ld.add_action(
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
-                FindPackageShare('mrs_uav_managers'), '/launch/transform_manager.py'
+                FindPackageShare('mrs_uav_managers'), '/launch/transform_manager.launch.py'
             ]),
             launch_arguments={
                 'use_sim_time': use_sim_time,
@@ -256,7 +256,7 @@ def generate_launch_description():
     ld.add_action(
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
-                FindPackageShare('mrs_uav_managers'), '/launch/constraint_manager.py'
+                FindPackageShare('mrs_uav_managers'), '/launch/constraint_manager.launch.py'
             ]),
             launch_arguments={
                 'use_sim_time': use_sim_time,
@@ -273,7 +273,7 @@ def generate_launch_description():
     ld.add_action(
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
-                FindPackageShare('mrs_uav_managers'), '/launch/gain_manager.py'
+                FindPackageShare('mrs_uav_managers'), '/launch/gain_manager.launch.py'
             ]),
             launch_arguments={
                 'use_sim_time': use_sim_time,
@@ -290,7 +290,7 @@ def generate_launch_description():
     ld.add_action(
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
-                FindPackageShare('mrs_uav_managers'), '/launch/estimation_manager.py'
+                FindPackageShare('mrs_uav_managers'), '/launch/estimation_manager.launch.py'
             ]),
             launch_arguments={
                 'use_sim_time': use_sim_time,
@@ -307,7 +307,7 @@ def generate_launch_description():
     ld.add_action(
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
-                FindPackageShare('mrs_uav_trajectory_generation'), '/launch/trajectory_generation.py'
+                FindPackageShare('mrs_uav_trajectory_generation'), '/launch/trajectory_generation.launch.py'
             ]),
             launch_arguments={
                 'use_sim_time': use_sim_time,
@@ -322,7 +322,7 @@ def generate_launch_description():
     ld.add_action(
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
-                FindPackageShare('mrs_uav_status'), '/launch/acquisition.py'
+                FindPackageShare('mrs_uav_status'), '/launch/acquisition.launch.py'
             ]),
             launch_arguments={
                 'use_sim_time': use_sim_time,
