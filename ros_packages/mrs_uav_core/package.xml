@@ -20,6 +20,7 @@
   <depend>builtin_interfaces</depend>
 
   <depend>rmw_zenoh_cpp</depend>
+  <depend>rmw_cyclonedds_cpp</depend>
 
   <depend>mrs_msgs</depend>
   <depend>mrs_lib</depend>
@@ -33,7 +34,6 @@
   <depend>mrs_uav_trajectory_generation</depend>
   <depend>mrs_uav_status</depend>
   <depend>mrs_uav_testing</depend>
-  <!-- <depend>mrs_rviz_plugins</depend> -->
 
   <depend>tmux</depend>
   <depend>tmuxinator</depend>

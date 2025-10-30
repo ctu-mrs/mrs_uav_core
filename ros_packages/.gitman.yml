@@ -74,7 +74,7 @@ sources:
       - git submodule update --init --recursive
   - repo: https://github.com/ctu-mrs/mrs_uav_managers.git
     name: mrs_uav_managers
-    rev: ros2_safety_area_manager
+    rev: ros2
     type: git
     params:
     sparse_paths:

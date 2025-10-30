@@ -222,7 +222,7 @@ def generate_launch_description():
     ld.add_action(
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
-                FindPackageShare('mrs_uav_managers'), '/launch/safety_area_manager.py'
+                FindPackageShare('mrs_uav_managers'), '/launch/safety_area_manager.launch.py'
             ]),
             launch_arguments={
                 'use_sim_time': use_sim_time,
