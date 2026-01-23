@@ -197,6 +197,7 @@ def generate_launch_description():
             {'use_sim_time': use_sim_time},
         ],
         # prefix=[debug],
+        # prefix="valgrind --tool=memcheck --leak-check=no --track-origins=no --show-reachable=no --errors-for-leak-kinds=definite --num-callers=12",
         condition=UnlessCondition(standalone)
     )
 
