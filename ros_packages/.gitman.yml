@@ -1,6 +1,6 @@
 location: .gitman
 sources:
-  - repo: https://github.com/ctu-mrs/mrs_multirotor_simulator
+  - repo: git@github.com:ctu-mrs/mrs_multirotor_simulator.git
     name: mrs_multirotor_simulator
     rev: ros2
     type: git
@@ -12,9 +12,9 @@ sources:
         target: mrs_multirotor_simulator
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_state_estimators.git
+  - repo: git@github.com:ctu-mrs/mrs_uav_state_estimators.git
     name: mrs_uav_state_estimators
-    rev: ros2
+    rev: ros2_errorgraph
     type: git
     params:
     sparse_paths:
@@ -24,9 +24,9 @@ sources:
         target: mrs_uav_state_estimators
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_hw_api.git
+  - repo: git@github.com:ctu-mrs/mrs_uav_hw_api.git
     name: mrs_uav_hw_api
-    rev: ros2
+    rev: ros2_errorgraph
     type: git
     params:
     sparse_paths:
@@ -36,9 +36,9 @@ sources:
         target: mrs_uav_hw_api
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_lib.git
+  - repo: git@github.com:ctu-mrs/mrs_lib.git
     name: mrs_lib
-    rev: ros2
+    rev: ros2_errorgraph
     type: git
     params:
     sparse_paths:
@@ -48,9 +48,9 @@ sources:
         target: mrs_lib
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_msgs.git
+  - repo: git@github.com:ctu-mrs/mrs_msgs.git
     name: mrs_msgs
-    rev: ros2
+    rev: ros2_diagnostics_manager
     type: git
     params:
     sparse_paths:
@@ -60,7 +60,7 @@ sources:
         target: mrs_msgs
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_controllers.git
+  - repo: git@github.com:ctu-mrs/mrs_uav_controllers.git
     name: mrs_uav_controllers
     rev: ros2
     type: git
@@ -72,9 +72,9 @@ sources:
         target: mrs_uav_controllers
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_managers.git
+  - repo: git@github.com:ctu-mrs/mrs_uav_managers.git
     name: mrs_uav_managers
-    rev: ros2
+    rev: ros2_errorgraph
     type: git
     params:
     sparse_paths:
@@ -84,7 +84,7 @@ sources:
         target: mrs_uav_managers
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_trackers.git
+  - repo: git@github.com:ctu-mrs/mrs_uav_trackers.git
     name: mrs_uav_trackers
     rev: ros2
     type: git
@@ -96,9 +96,9 @@ sources:
         target: mrs_uav_trackers
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_autostart.git
+  - repo: git@github.com:ctu-mrs/mrs_uav_autostart.git
     name: mrs_uav_autostart
-    rev: ros2
+    rev: ros2_errorgraph
     type: git
     params:
     sparse_paths:
@@ -108,7 +108,7 @@ sources:
         target: mrs_uav_autostart
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_testing.git
+  - repo: git@github.com:ctu-mrs/mrs_uav_testing.git
     name: mrs_uav_testing
     rev: ros2
     type: git
@@ -120,7 +120,7 @@ sources:
         target: mrs_uav_testing
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_trajectory_generation.git
+  - repo: git@github.com:ctu-mrs/mrs_uav_trajectory_generation.git
     name: mrs_uav_trajectory_generation
     rev: ros2
     type: git
@@ -132,7 +132,7 @@ sources:
         target: mrs_uav_trajectory_generation
     scripts:
       - git submodule update --init --recursive
-  - repo: https://github.com/ctu-mrs/mrs_uav_status.git
+  - repo: git@github.com:ctu-mrs/mrs_uav_status.git
     name: mrs_uav_status
     rev: ros2
     type: git
