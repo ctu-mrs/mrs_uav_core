@@ -5,7 +5,7 @@ import os
 import sys
 
 from launch.actions import IncludeLaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, OpaqueFunction
 from launch_ros.actions import ComposableNodeContainer, LoadComposableNodes
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.conditions import IfCondition, UnlessCondition
@@ -150,27 +150,6 @@ def generate_launch_description():
 
     # #} end of network_config
 
-    # #{ debug
-
-    debug = LaunchConfiguration('debug')
-
-    # this adds the args to the list of args available for this launch files
-    # these args can be listed at runtime using -s flag
-    # default_value is required to if the arg is supposed to be optional at launch time
-    ld.add_action(DeclareLaunchArgument(
-        'debug',
-        default_value="false",
-        description="Path to the custom configuration file. The path can be absolute, starting with '/' or relative to the current working directory",
-        ))
-
-    debug = IfElseSubstitution(
-            condition=PythonExpression(['"', debug, '" == "true"']),
-            if_value="debug_roslaunch " + os.ttyname(sys.stdout.fileno()),
-            else_value=""
-            )
-
-    # #} end of debug
-
     # #{ use_sim_time
 
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -185,23 +164,37 @@ def generate_launch_description():
 
     container_name = ["/", uav_name, "/uav_core_container"]
 
-    core_container = ComposableNodeContainer(
-        namespace=uav_name,
-        name='uav_core_container',
-        package='rclcpp_components',
-        executable='component_container_mt',
-        output="screen",
-        parameters=[
-            {'use_intra_process_comms': True},
-            {'thread_num': os.cpu_count()},
-            {'use_sim_time': use_sim_time},
-        ],
-        prefix=[debug],
-        # prefix="valgrind --tool=memcheck --leak-check=no --track-origins=no --show-reachable=no --errors-for-leak-kinds=definite --num-callers=12",
-        condition=UnlessCondition(standalone)
-    )
+    def setup_core_container(context):
 
-    ld.add_action(core_container)
+        debug_str = context.launch_configurations.get('debug', 'false')
+        is_debug = debug_str.lower() == 'true'
+
+        node_prefix = ""
+        if is_debug:
+            try:
+                node_prefix = "debug_roslaunch " + os.ttyname(sys.stdout.fileno())
+            except OSError:
+                print("WARNING: Cannot attach debug_roslaunch. No valid TTY found.")
+
+        core_container = ComposableNodeContainer(
+            namespace=uav_name, # These variables are safely captured from the outer scope
+            name='uav_core_container',
+            package='rclcpp_components',
+            executable='component_container_mt',
+            output="screen",
+            parameters=[
+                {'use_intra_process_comms': True},
+                {'thread_num': os.cpu_count()},
+                {'use_sim_time': use_sim_time},
+            ],
+            prefix=[node_prefix],
+            # prefix="valgrind --tool=memcheck --leak-check=no --track-origins=no --show-reachable=no --errors-for-leak-kinds=definite --num-callers=12",
+            condition=UnlessCondition(standalone)
+        )
+
+        return [core_container]
+
+    ld.add_action(OpaqueFunction(function=setup_core_container))
 
     ld.add_action(
         IncludeLaunchDescription(
