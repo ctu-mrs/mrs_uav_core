@@ -179,8 +179,12 @@ def generate_launch_description():
         core_container = ComposableNodeContainer(
             namespace=uav_name, # These variables are safely captured from the outer scope
             name='uav_core_container',
-            package='rclcpp_components',
-            executable='component_container_mt',
+            # executable='component_container_mt',
+            # package='rclcpp_components',
+            # executable='component_container_isolated',
+            # package='rclcpp_components',
+            package='mrs_uav_managers',
+            executable='events_container',
             output="screen",
             parameters=[
                 {'use_intra_process_comms': True},
