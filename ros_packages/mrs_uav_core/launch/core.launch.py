@@ -183,8 +183,10 @@ def generate_launch_description():
             # package='rclcpp_components',
             # executable='component_container_isolated',
             # package='rclcpp_components',
-            package='mrs_uav_managers',
-            executable='events_container',
+            # package='mrs_uav_managers',
+            # executable='events_container',
+            executable='component_container_events_cbg',
+            package='rclcpp_components',
             output="screen",
             parameters=[
                 {'use_intra_process_comms': True},
