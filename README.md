@@ -32,6 +32,7 @@ Moreover, the core provides
 | [mrs_multirotor_simulator](https://github.com/ctu-mrs/mrs_multirotor_simulator/tree/ros2)           |
 | [mrs_uav_controllers](https://github.com/ctu-mrs/mrs_uav_controllers/tree/ros2)                     |
 | [mrs_uav_autostart](https://github.com/ctu-mrs/mrs_uav_autostart/tree/ros2)                         |
+| [mrs_uav_diagnostics_sensors](https://github.com/ctu-mrs/mrs_uav_diagnostics_sensors/tree/ros2)     |
 | [mrs_uav_hw_api](https://github.com/ctu-mrs/mrs_uav_hw_api/tree/ros2)                               |
 | [mrs_uav_managers](https://github.com/ctu-mrs/mrs_uav_managers/tree/ros2)                           |
 | [mrs_uav_state_estimators](https://github.com/ctu-mrs/mrs_uav_state_estimators/tree/ros2)           |

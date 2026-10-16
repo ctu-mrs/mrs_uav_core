@@ -333,14 +333,15 @@ def generate_launch_description():
     ld.add_action(
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource([
-                FindPackageShare('mrs_uav_status'), '/launch/acquisition.launch.py'
+                FindPackageShare('mrs_uav_managers'), '/launch/diagnostics_manager.launch.py'
             ]),
             launch_arguments={
                 'use_sim_time': use_sim_time,
                 'custom_config': custom_config,
                 'platform_config': platform_config,
-                'standalone': standalone,
-                'container_name': container_name,
+                # always standalone: DiagnosticsManager must keep running (and reporting) if the
+                # shared uav_core_container crashes, so it cannot share a process with it
+                'standalone': 'true',
             }.items()
         )
     )
